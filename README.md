@@ -1,11 +1,10 @@
-# Card Hover Reveal
-![Card-Hover-Reveal-demo](https://github.com/teotimepacreau/Card-Hover-Reveal-Day12-Of-100DaysOfCode/blob/main/Card%20Hover%20Reveal.gif)
+# Sliding Menu and Grid App View
+![Sliding Menu and Grid App View](https://github.com/teotimepacreau/Sliding-menu-and-grip-app-view-Day13-Of-100DaysOfCode/blob/main/Sliding%20menu%20and%20grid%20app%20view.gif)
 
 # Project goals
-- div overlay up to 100% on hover with transition cubic-bezier
-- transform: scale() in order to create the zoom effect on paintings
-- z-index in order to put lettering above everything
-- flexbox to have 4 equals item
+- lch() color function to create tints and shades and please human eye. Also CSS color variables
+- modal position fixed
+- button alignment with ::before technique (vertical-align: middle) and UI principles of 2ex padding-inline for 1ex padding-block
 
 # 🛠️
 VanillaJS, CSS, HTML
