@@ -1,0 +1,307 @@
+/* CSS RESET */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Remove default list styles */
+ul, ol, li {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+}    
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+    
+/* A element that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+    
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%; /* img should never overflow past the available space*/
+  display: block; /* avoid blank bottom*/
+  height: auto;/*preserve aspect ratio*/
+}
+
+/* More consistent, styleable hr*/
+hr {
+  border-width: 1px 0 0 0;
+  color: inherit;
+  height: 0;
+  overflow: visible;
+}
+
+/* Remove built-in form typography styles */
+input, button, textarea, select {
+  font: inherit;
+  color: inherit;
+}
+
+/* More space above the underline */
+a {
+  text-underline-offset: 0.2ex;
+}
+
+
+/*body *{
+    outline : 2px solid red ;
+}*/
+
+/* FONTS */
+@font-face {
+  font-family: 'Atkinson-Hyperlegible-Regular';
+  src: local("Atkinson-Hyperlegible-Regular"),
+  url("Atkinson-Hyperlegible-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: 'Atkinson-Hyperlegible-Bold';
+  src: local("Atkinson-Hyperlegible-Bold"),
+  url("Atkinson-Hyperlegible-Bold.woff2") format("woff2");
+}
+
+/* CUSTOM PROPERTIES */
+
+:root {
+  --tailleparagraphe: 1rem;
+  --taillesubtitle: 1.618rem;
+  --tailleh3: 2.618rem;
+  --tailleh2: 4.236rem;
+  --tailleh1: 6.854rem;
+  --rythme: 1.5rem;
+  --bg: lch(97% 3 0);
+  --orangelight: lch(90% 20 60);
+  --orangeaccent: lch(50% 200 60);
+  --greylight: lch(90% 0 0);
+  --greyaccent: lch(30% 5 0);
+  --greenlight: lch(90% 20 150);
+  --greenaccent: lch(50% 200 150);
+  --redlight: lch(90% 20 40);
+  --redaccent: lch(50% 200 40);
+  --black: lch(5% 3 0);
+}
+
+/* TYPE SETTINGS */
+p {
+  font-size: var(--tailleparagraphe);
+  line-height: 1.5;
+}
+
+h1 {
+  font-family: "Atkinson-Hyperlegible-Bold";
+  margin-top: var(--rythme);
+  font-size: var(--tailleh3);
+  line-height: 1.3;
+  letter-spacing: 0.08rem;
+}
+
+body {
+  font-family: "Atkinson-Hyperlegible-Regular";
+  background-color: var(--bg);
+}
+
+/*CONTAINER*/
+.container {
+  margin: var(--rythme);
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+}
+
+.right-nav {
+  display: flex;
+  gap: var(--rythme);
+}
+
+h2 {
+  margin-top: var(--rythme);
+}
+
+.filters {
+  margin-top: var(--rythme);
+  display: flex;
+  gap: var(--rythme);
+}
+
+.filters > * {
+  flex-grow: 0;
+}
+
+.tiles-intro {
+  margin-top: var(--rythme);
+}
+
+.tiles {
+  margin-top: var(--rythme);
+  display: flex;
+  gap: var(--rythme);
+  flex-wrap: wrap;
+}
+
+.tiles > * {
+  flex: 1 1 10rem;
+}
+
+.tile {
+  border-radius: calc(0.5*var(--rythme));
+  padding: calc(0.5*var(--rythme));
+  display: flex;
+  flex-direction: column;
+  gap: var(--rythme);
+  justify-content: space-between;
+}
+
+.tile:first-child{
+  background-color: var(--orangelight);
+}
+
+.tile:first-child .tile-msg{
+  color: var(--orangeaccent);
+}
+
+.tile:first-child i{
+  color: var(--orangeaccent);
+}
+
+.tile:nth-child(2){
+  background-color: var(--greylight);
+}
+
+.tile:nth-child(2) .tile-msg{
+  color: var(--greyaccent);
+}
+
+.tile:nth-child(2) i{
+  color: var(--greyaccent);
+}
+
+.tile:nth-child(3){
+  background-color: var(--greenlight);
+}
+
+.tile:nth-child(3) .tile-msg{
+  color: var(--greenaccent);
+}
+
+.tile:nth-child(3) i{
+  color: var(--greenaccent);
+}
+
+.tile:nth-child(4){
+  background-color: var(--redlight);
+}
+
+.tile:nth-child(4) .tile-msg{
+  color: var(--redaccent);
+}
+
+.tile:nth-child(4) i{
+  color: var(--redaccent);
+}
+
+
+
+button {
+  min-width: calc(0.5*var(--rythme));
+  cursor: pointer;
+  font-family: "Atkinson-Hyperlegible-Regular";
+  font-size: 1rem;
+  line-height: 1rem;
+  border: 3px solid;
+  border-color: transparent;
+  background-color: var(--greylight);
+  color: var(--black);
+  padding: 1ex 2ex;/*hauteur des minuscules souvent appelée hauteur "x" lowercase*/
+  border-radius: calc(0.5*var(--rythme));
+  transition: 0.3s ease-out;
+}
+
+.button::before {
+	content: "";
+	display: inline-block;
+  height: 1em;
+	vertical-align: middle;
+}
+
+button:hover {
+  background-color: var(--black);
+  color: var(--greylight);
+  border-color: #98a9ce;
+}
+
+button:focus {
+  outline: none;
+  border-color: #98a9ce;
+}
+
+#active {
+  background-color: var(--black);
+  color: var(--greylight);
+}
+
+.navbar-mobile-list {
+  display: flex;
+  flex-direction: column;
+  gap: calc(2*var(--rythme));
+  justify-content: space-evenly;
+}
+
+.modal {
+  background-color: var(--greylight);
+  height: 100dvh;
+  position: fixed;
+  top: 0;
+  right: -60dvw;
+  width: 50%;
+  opacity: 0;
+  transition: right 0.7s ease-out, opacity 0.7s ease-out;
+  padding: calc(3*var(--rythme)) var(--rythme);
+}
+
+.modal i {
+  position: absolute;
+  top: calc(2*var(--rythme));
+  right: var(--rythme);
+  cursor: pointer;
+}
+
+
+.navbar-mobile-list > * {
+  text-decoration: none;
+  color: var(--black);
+  font-family: "Atkinson-Hyperlegible-Bold";
+}
+
+.navbar-mobile-list > *:hover {
+  color: var(--greenaccent);
+}
+
+.navbar-mobile-list > *:focus {
+  color: var(--greenaccent);
+  outline-color: var(--greenaccent);
+}
+
+.navbar-mobile-list > *::before {
+  content: "→ ";
+}
+
+.show-menu {
+  right: 0%;
+  opacity: 0.99;
+  transition: right 0.7s ease-in, opacity 0.7s ease-in;
+}

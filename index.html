@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <title>Sliding menu and grip app view</title>
+</head>
+<body>
+    <div class="container">
+        <nav class="navigation">
+            <button><i class="fa-solid fa-chevron-left"></i></button>
+            <div class="right-nav">
+                <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                <button><i class="fa-solid fa-bars"></i></button>
+                <div class="modal">
+                    <i class="fa-solid fa-circle-xmark fa-xl" id="close-modal"></i>
+                    <div class="navbar-mobile-list">
+                        <a href="#">ACCUEIL</a>
+                        <a href="#">SERVICES</a>
+                        <a href="#">A PROPOS</a>
+                        <a href="#">BLOG</a>
+                        <a href="#">CONTACT</a>
+                    </div>
+                 </div>
+            </div>
+        </nav>
+        <h1>Applications</h1>
+        <div class="filters">
+            <button id="active" class="button">All</button>
+            <button class="button">Sign in</button>
+            <button class="button">Completed</button>
+        </div>
+        <h2 class="tiles-intro">Updates</h2>
+        <div class="tiles">
+            <div class="tile one">
+                    <i class="fa-solid fa-circle-dot"></i>
+                    <h3>Application for Clearance Certificate</h3>
+                    <h4 class="tile-msg">Final Bill Payment</h4>
+                    <span>2 min ago</span>
+            </div>
+            <div class="tile two">
+                    <i class="fa-solid fa-circle-dot"></i>
+                    <h3>Issuance and attestation of school certificate</h3>
+                    <h4 class="tile-msg">Approval</h4>
+                    <span>3 hours ago</span>
+            </div>
+            <div class="tile three">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <h3>Vehicle Driver's License Issuance</h3>
+                    <h4 class="tile-msg">Certificate generated</h4>
+                    <span>2 min ago</span>
+            </div>
+            <div class="tile four">
+                    <i class="fa-solid fa-circle-xmark"></i>
+                    <h3>Issue to whom it may concern certificate</h3>
+                    <h4 class="tile-msg">Application Rejected</h4>
+                    <span>1 hour ago</span>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
